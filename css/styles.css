@@ -1,0 +1,229 @@
+/* ---------------------------------------------------------
+   PROJECT 3 CSS TEMPLATE 
+   (sources: iandevlin/html5bones, 
+   jeffThompson/WebDesignExamples, devinhunt/typebase.css)
+   
+   This stylesheet contains print styling and a section for 
+   you to simply add your own. 
+   ---------------------------------------------------------*/
+
+
+/* ---------------------------------------------------------
+    GENERAL TYPOGRAPHY AND COLOR
+   ---------------------------------------------------------*/
+    
+    
+html {
+  /* Change default typefaces here */
+  font-family: serif;
+  font-size: 137.5%; /* This sets the base font size of the entire document */
+  -webkit-font-smoothing: antialiased;
+  background-color: rgb(255, 255, 255)
+}
+
+
+/* Paragraphs*/
+p {
+/* the rem unit sizes everything in relation to the base font-size set above */
+  line-height: 1.5rem; 
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+/*Lists */
+
+ul,
+ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+ul li,
+ol li {
+  line-height: 1.5rem;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Quotes */
+
+blockquote {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Change heading typefaces here */
+  font-family: sans-serif;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+}
+h1 {
+  font-size: 4.242rem;
+  line-height: 4.5rem;
+  margin-top: 3rem;
+}
+h2 {
+  font-size: 2.828rem;
+  line-height: 3rem;
+  margin-top: 3rem;
+}
+h3 {
+  font-size: 1.414rem;
+}
+h4 {
+  font-size: 0.707rem;
+}
+h5 {
+  font-size: 0.4713333333333333rem;
+}
+h6 {
+  font-size: 0.3535rem;
+}
+
+/* Tables */
+table {
+  margin-top: 1.5rem;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+table td,
+table th {
+  padding: 0;
+  line-height: 33px;
+}
+/* Code blocks */
+code {
+  vertical-align: bottom;
+}
+
+/* Links */
+a, a:link, a:visited {
+	color: rgb(255,0,0);
+	text-decoration: none;
+}
+a:active, a:hover {
+	color: rgb(255,150,0);
+	text-decoration: none;
+}
+
+
+/* ---------------------------------------------------------
+    WRAPPER (Centers the main content)
+   ---------------------------------------------------------*/
+   
+/* 	this has the usual width and float to center stuff */
+.wrap {
+	width: 900px;
+	margin: 0px auto 30px auto;			/* even spacing on either side (centers the div) with some space at bottom */
+	background-color: rgb(255, 255, 255);
+}
+
+
+/* ---------------------------------------------------------
+    HEADER
+   ---------------------------------------------------------*/
+
+/* 	the header will have the site's main title and a horizontal menu */
+header {
+	background-color: rgb(230, 230, 230); /* set background-color */
+	background-image: url(../images/bg-pattern.png); /* set a background-image for the header http://www.transparenttextures.com */
+	background-repeat: repeat; /* repeat background image */
+	padding: 20px;
+}
+
+/* 	different link settings for the navigation - this essentially says "style links (the <a> tag) that are inside the navigation (the <nav> tag) inside the header section (the <header> tag)" */
+header nav a, header nav a:link, header h1 a:visited {
+	color: black;
+	text-decoration: none;
+}
+header nav a:active, header nav a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+/* 	advanced: a horizontal menu using unordered list */
+header ul {
+	margin: 10px 0 -10px 0;  			/* add some space at the top, squish the menu down to the bottom */
+}
+header li {
+	display: inline;					/* this makes the list horizontal */
+	list-style: none;	  				/* gets rid of bullets, but not needed due to CSS reset! */
+	padding-right: 20px;				/* space in between */
+}
+
+
+/* ---------------------------------------------------------
+    SIDEBAR
+   ---------------------------------------------------------*/
+
+
+/* 	the sidebar can go on the L or R side and usually has a menu and/or meta info */
+#sidebar {
+	float: left;
+	width: 200px;
+	background-color: white;
+	padding: 20px;
+	border-right: 1px solid black;
+
+}
+
+
+/* 	Adjust typography by targeting paragraphs <p> in the sidebar */
+#sidebar p {
+font-size: 0.75rem;
+line-height: 1rem;
+}
+
+/* 	MAIN CONTENT */
+/* 	this is where your main stuff would go, be it an article, a video, or a product */
+main {
+	float: left;		/* also float left so it goes next to the sidebar */
+	width: 619px;		/* this should be the width of the wrapper minus sidebar and padding on both */
+	background-color: white;
+	padding: 20px;
+}
+
+/* ---------------------------------------------------------
+    FOOTER
+   ---------------------------------------------------------*/
+   
+/* 	the footer sits at the bottom */
+footer {
+	background-color: rgb(235,235,235);		/* same as header */
+	padding: 20px;
+}
+
+
+
+/* ---------------------------------------------------------
+   UTILITY CLASSES
+   ---------------------------------------------------------*/
+
+.clear {
+	clear: both;	/* a 'utility' class that stops 'float' and places next item below */
+}
+
+/* can be used to center content like images */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+    
